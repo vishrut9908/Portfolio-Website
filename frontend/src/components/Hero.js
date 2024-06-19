@@ -22,9 +22,9 @@ const Hero = () => {
         <div className='container' ref={container}></div>
       </div>
       <div className='max-w-md mb-auto space-y-5'>
-        <h1 className='text-5xl font-bold md:text-7xl'>Hello. I’m Theelipan</h1>
+        <h1 className='text-5xl font-bold md:text-7xl'> Hello. I’m Vishrut Goti </h1>
         <p className='tracking-wide leading-relaxed'>
-          I have a passion for developing user-friendly, accessible and responsive websites. I never stop learning and for me, each new project is another adventure.{' '}
+          With a passion for innovation and a diverse skill set spanning across software development, web development, and AI/ML engineering, I bring a unique blend of creativity and technical expertise to the table. My journey in technology has been driven by a relentless pursuit of excellence, coupled with a commitment to staying abreast of the latest advancements in the field. Whether it's crafting elegant web solutions, architecting robust software systems, or delving into the realms of artificial intelligence and machine learning, I am dedicated to delivering impactful results that exceed expectations.{' '}
         </p>
       </div>
     </section>

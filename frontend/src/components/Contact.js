@@ -4,24 +4,24 @@ const Contact = () => {
   return (
     <section className='my-28' id='contact'>
       <header className='px-5 text-2xl font-bold pt-10'>
-        <h2>Contact Me</h2>
-        <p className='text-base font-thin'>I'd love to hear your thoughts!</p>
+        <h2> Contact Me </h2>
+        <p className='text-base font-thin'> I'd love to hear your thoughts! </p>
       </header>
       <div className='md:mx-6 flex flex-col flex-wrap md:flex-row justify-between'>
         <div className='md:w-6/12 md:px-0 p-5 my-5'>
           <div>
-            <p className='font-bold'>Theelipan Prabakar</p>
-            <p className='font-thin'>Middletown, Connecticut</p>
-            <a href='mailto: Theelipan@gmail.com' className='border-b-2 mt-3 inline-block border-gray-500'>
-              Theelipan@gmail.com
+            <p className='font-bold'> Vishrut Goti </p>
+            <p className='font-thin'> San Jose, California </p>
+            <a href='mailto: VishrutJiteshkumar.Goti01@student.csulb.edu' className='border-b-2 mt-3 inline-block border-gray-500'>
+              VishrutJiteshkumar.Goti01@student.csulb.edu
             </a>
           </div>
-          <a className='border-b-2 mt-3 inline-block border-gray-500' href='./Resume - Theelipan Prabakar.pdf' target='_blank' rel='noreferrer'>
-            Resume
+          <a className='border-b-2 mt-3 inline-block border-gray-500' href='./Resume_SDE.pdf' target='_blank' rel='noreferrer'>
+            Resume 
           </a>
           <div className='flex flex-row flex-wrap mt-7'>
             <div className='mr-4'>
-              <a href='https://www.linkedin.com/in/theelipan' target='_blank' rel='noreferrer'>
+              <a href='https://www.linkedin.com/in/vishrut-goti-73a861233/' target='_blank' rel='noreferrer'>
                 <span className='mb-2 flex flex-row items-end border border-gray-500 p-2 rounded-lg text-sm'>
                   <img src='./images/icons/linkedin.svg' alt='' width='24px' height='24px' className='mr-1' />
                   LinkedIn
@@ -30,7 +30,7 @@ const Contact = () => {
             </div>
 
             <div className='mr-4'>
-              <a href='https://github.com/Deelip7' target='_blank' rel='noreferrer'>
+              <a href='https://github.com/vishrut9908' target='_blank' rel='noreferrer'>
                 <span className='mb-2 flex flex-row items-end border border-gray-500 p-2 rounded-lg text-sm'>
                   <img src='./images/icons/github.svg' alt='' width='24px' height='24px' className='mr-1' />
                   GitHub
@@ -38,10 +38,10 @@ const Contact = () => {
               </a>
             </div>
 
-            <a href='https://codepen.io/Theelipan' target='_blank' rel='noreferrer'>
+            <a href='https://leetcode.com/u/vishrutgoti/' target='_blank' rel='noreferrer'>
               <span className='mb-2 flex flex-row items-end border border-gray-500 p-2 rounded-lg text-sm'>
-                <img src='./images/icons/codepen.svg' alt='' width='24px' height='24px' className='mr-1' />
-                CodePen
+                <img src='./images/icons/leetcode.svg' alt='' width='24px' height='24px' className='mr-1' />
+                Leetcode
               </span>
             </a>
           </div>
