@@ -12,5 +12,6 @@ Awesome illustrations.
 
 ## Illustrations
 
-https://illlustrations.co/
+https://illlustrations.com/
+
 https://www.pixeltrue.com/
