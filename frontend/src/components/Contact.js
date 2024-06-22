@@ -47,8 +47,14 @@ const Contact = () => {
           </div>
         </div>
 
+        {/* <!-- <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+                    <input type="text" name="name" />
+                    <input type="email" name="email" />
+                    <textarea name="message"></textarea>
+                  </form> --> */}
+
         <div className='bg-gray px-5 py-10 md:py-8 sm:p-8 my-2 md:rounded-lg shadow-lg  justify-between w-full  md:w-6/12 '>
-          <form className='flex flex-col space-y-3 m-auto w-full' name='contact' method='post' data-netlify="true" netlify netlify-honeypot="bot-field" hidden>
+          {/* <form className='flex flex-col space-y-3 m-auto w-full' name='contact' method='post' netlify>
             <input type='hidden' name='form-name' value='contact' />
 
             <label htmlFor='name'>Name</label>
@@ -60,7 +66,55 @@ const Contact = () => {
             <button type='submit' className='border border-gray-500 p-2 rounded-lg w-auto mr-auto shadow-md'>
               Send Message
             </button>
+          </form> */}
+
+          <form
+            className="flex flex-col space-y-3 m-auto w-full"
+            name="contact"
+            action="/contact"
+            method="post"
+            data-netlify="true"
+            onSubmit = "submit"
+            data-netlify-honeypot="bot-field"
+          >
+          <input type='hidden' name='bot-field' />
+
+            <label htmlFor='name'>Name</label>
+            <input
+              type='text'
+              name='name'
+              id='name'
+              className='gradient'
+              required
+            />
+
+            <label htmlFor='email'>Email</label>
+            <input
+              type='email'
+              name='email'
+              id='email'
+              className='gradient'
+              required
+            />
+
+            <label htmlFor='message'>Message</label>
+            <textarea
+              name='message'
+              id='message'
+              cols='25'
+              rows='5'
+              className='gradient'
+              required
+            />
+
+            <button
+              type='submit'
+              className='border border-gray-500 p-2 rounded-lg w-auto mr-auto shadow-md'
+            >
+              Send Message
+            </button>
           </form>
+
         </div>
       </div>
       <div className='relative md:bottom-56 mr-auto ml-auto md:mr-auto md:ml-0 max-w-xs md:max-w-sm' onClick={() => window.scroll(0, 0)}>
