@@ -1,6 +1,31 @@
 import React from 'react';
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
 
 const Contact = () => {
+  
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_2ioj3zh', 'template_zkdjmnb', form.current, {
+        publicKey: 'fC3OzEftZ6PVtvep1',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS, message sent!');
+          alert("Email was sent successfully!");
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          alert("Try again!");
+        },
+      );
+  };
+
+
   return (
     <section className='my-28' id='contact'>
       <header className='px-5 text-2xl font-bold pt-10'>
@@ -48,16 +73,16 @@ const Contact = () => {
         </div>
 
         <div className='bg-gray px-5 py-10 md:py-8 sm:p-8 my-2 md:rounded-lg shadow-lg  justify-between w-full  md:w-6/12 '>
-          <form className='flex flex-col space-y-3 m-auto w-full' name='contact' method='post'>
+          <form className='flex flex-col space-y-3 m-auto w-full' ref={form} onSubmit={sendEmail}>
             <input type='hidden' name='form-name' value='contact' />
 
             <label htmlFor='name'>Name</label>
-            <input type='text' name='name' id='name' className='gradient' required></input>
+            <input type='text' name='from_name' id='name' className='gradient' required></input>
             <label htmlFor='email'>Email</label>
-            <input type='email' name='email' id='email' className='gradient' required></input>
+            <input type='email' name='from_email' id='email' className='gradient' required></input>
             <label htmlFor='message'>Message</label>
             <textarea name='message' id='message' cols='25' rows='5' className='gradient' required></textarea>
-            <button type='submit' className='border border-gray-500 p-2 rounded-lg w-auto mr-auto shadow-md'>
+            <button type='submit' value='Send' className='border border-gray-500 p-2 rounded-lg w-auto mr-auto shadow-md'>
               Send Message
             </button>
           </form>
