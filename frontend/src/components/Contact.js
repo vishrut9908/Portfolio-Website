@@ -1,28 +1,28 @@
 import React from 'react';
 import emailjs from '@emailjs/browser';
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 
 const Contact = () => {
+
+  useEffect(() => {
+    emailjs.init("oX2BlZtgeyY4RHmcw");
+  }, []);
   
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm('service_2ioj3zh', 'template_zkdjmnb', form.current, {
-        publicKey: 'fC3OzEftZ6PVtvep1',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS, message sent!');
-          alert("Email was sent successfully!");
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-          alert("Try again!");
-        },
-      );
+    emailjs.sendForm('service_2ioj3zh', 'template_zkdjmnb', form.current).then(
+      () => {
+        console.log('SUCCESS, message sent!');
+        alert("Message was sent successfully!");
+      },
+      (error) => {
+        console.log('FAILED...', error.text);
+        alert("Try again!");
+      },
+    );
   };
 
 
